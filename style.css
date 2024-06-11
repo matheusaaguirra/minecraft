@@ -13,6 +13,12 @@ body {
     margin: 5px;
 }
 
+.highlight {
+    border: 2px solid red;
+    padding: 2px;
+}
+
+
 .cabecalho {
     display: flex;
     margin: 1%;
@@ -56,8 +62,7 @@ body {
 }
 
 .img_villager img {
-    width: 30%;
-    /* Reduz o tamanho da imagem em 60% */
+    width: 19%;
     height: auto;
 }
 
@@ -67,7 +72,6 @@ body {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 20px;
-    /* Ajuste o espaço conforme necessário */
     text-align: center;
 }
 
@@ -81,6 +85,63 @@ section {
     font-weight: 600;
     font-size: 29px;
     margin-bottom: 20px;
-    /* Ajuste o espaço conforme necessário */
     text-align: center;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.tooltip img {
+    width: 100px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .busca {
+        width: 50%;
+        font-size: 25px;
+    }
+
+    .img_villager {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .img_villager img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .busca {
+        width: 40%;
+    }
+
+    .img_villager {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .img_villager img {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .titulo {
+        font-size: 60px;
+    }
+
+    .busca {
+        width: 30%;
+        font-size: 30px;
+    }
+
+    .img_villager img {
+        width: 19%;
+    }
 }
